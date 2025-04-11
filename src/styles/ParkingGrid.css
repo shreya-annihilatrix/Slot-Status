@@ -1,0 +1,47 @@
+.parking-grid {
+  display: grid;
+  gap: 30px;
+  justify-content: center;
+  margin: 0 auto;
+  margin-right: 40px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.parking-grid-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .parking-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .parking-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 992px) {
+  .parking-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  .parking-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+/* Ensure ParkingSlot components don't exceed their container */
+.parking-slot {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}

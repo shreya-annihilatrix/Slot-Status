@@ -1,0 +1,20 @@
+.footer {
+    background-color: #f1f1f1; /* Light gray background */
+    text-align: center; /* Center text */
+    padding: 20px; /* Padding */
+    position: relative; /* Ensure it stays at the bottom */
+    bottom: 0; /* Align to bottom */
+    width: 100%; /* Full width */
+    font-size: 14px; /* Font size */
+  }
+  
+  .footer a {
+    color: #007bff; /* Blue link color */
+    text-decoration: none; /* Remove underline */
+    margin: 0 10px; /* Space between links */
+  }
+  
+  .footer a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  

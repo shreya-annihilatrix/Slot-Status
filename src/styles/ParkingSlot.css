@@ -1,0 +1,132 @@
+.parking-slot {
+    width: 2500px;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+/* Vehicle count container styling */
+.vehicle-count-container {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    text-align: left;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.count-details p {
+    margin: 2px 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Style for zero counts in available slots */
+.available .count-details p {
+    color: #4caf50;
+}
+
+/* Background colors for occupied and available slots */
+.parking-slot.occupied {
+    background-color: #ffe6e6;
+}
+
+.parking-slot.available {
+    background-color: #e6ffe6;
+}
+
+/* Vehicles container */
+.vehicles-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Common vehicle styling */
+.vehicle {
+    font-size: 4em;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Position car and bike at different vertical positions */
+.car {
+    top: 30%;
+}
+
+.bike {
+    top: 60%;
+}
+
+/* Title styling */
+.parking-slot h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    position: absolute;
+    top: 10px;
+}
+
+/* Status text at the bottom of the slot */
+.parking-slot p.status {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    position: absolute;
+    bottom: 10px;
+}
+
+/* Color styles for statuses */
+.status.occupied {
+    color: #e53935;
+}
+
+.status.available {
+    color: #4caf50;
+}
+
+/* Moving animation for available vehicles */
+.available .vehicle {
+    animation: moveVehicles 4s linear infinite;
+}
+
+/* Slightly delay the bike animation */
+.available .bike {
+    animation-delay: 0s;
+}
+
+/* Keyframes for vehicle animation */
+@keyframes moveVehicles {
+    0% {
+        transform: translate(150px, 0);
+    }
+    50% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-150px, 0);
+    }
+}

@@ -1,0 +1,30 @@
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.parking-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Footer styling */
+.footer {
+  background-color: #f1f1f1; /* Light gray background */
+  text-align: center; /* Center text */
+  padding: 20px; /* Padding */
+  position: relative; /* Ensure it stays at the bottom */
+  bottom: 0; /* Align to bottom */
+  width: 100%; /* Full width */
+  font-size: 14px; /* Font size */
+}
